@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Total Frames:</strong>
+  <%= @product.total_frames %>
+</p>
+
+<p>
+  <strong>File Extension:</strong>
+  <%= @product.file_extension %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+
+
+<div class="threesixty car">
+    <div class="spinner">
+        <span>0%</span>
+    </div>
+    <ol class="threesixty_images"></ol>
+</div>

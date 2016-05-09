@@ -1,7 +1,8 @@
-var car;
+var product;
 function init(){
 
-    car = $('.car').ThreeSixty({
+    product = 
+        $('.product').ThreeSixty({
         totalFrames: gon.total_frames, // Total no. of image you have for 360 slider
         endFrame: gon.total_frames, // end frame for the auto spin animation
         currentFrame: 1, // This the start frame for auto spin
@@ -10,9 +11,10 @@ function init(){
         imagePath: gon.image_path, // path of the image assets
         filePrefix: '', // file prefix if any
         ext: gon.file_extension, // extention for the assets
-        height: 600,
-        width: 600,
-        navigation: true
+        height: 900,
+        width: 900,
+        navigation: true,
+        responsive: true
     });
 
 }

@@ -1,5 +1,5 @@
-require File.expand_path('../boot', __FILE__)
 
+require File.expand_path('../boot', __FILE__)
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -31,5 +31,6 @@ module Hawkeye
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_dispatch.default_headers.merge!({'X-Frame-Options' => 'ALLOWALL'})
   end
 end

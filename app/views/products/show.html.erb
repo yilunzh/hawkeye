@@ -1,35 +1,52 @@
-<!-- <p id="notice"><%= notice %></p>
+<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Total Frames:</strong>
-  <%= @product.total_frames %>
-</p>
-
-<p>
-  <strong>File Extension:</strong>
-  <%= @product.file_extension %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
- -->
-<div class="center-container">
-  <div class= "absolute-center">
-    <div class="threesixty product">
-        <div class="spinner">
-            <span>0%</span>
-        </div>
-        <ol class="threesixty_images"></ol>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
+      <p>
+        <strong>Total Frames:</strong>
+        <%= @product.total_frames %>
+      </p>
+    </div>
+    <div class="col-md-3">
+      <p>
+        <strong>File Extension:</strong>
+        <%= @product.file_extension %>
+      </p>
+      <p>
+        <strong>Display Width:</strong>
+        <%= @product.display_width %>
+      </p>
+      <p>
+        <strong>Display Height:</strong>
+        <%= @product.display_height %>
+      </p>
+    </div>
+    <div class="col-md-4">
+      <p>
+        <strong>Embed:</strong>
+        <%= @iframe %>
+      </p>
     </div>
   </div>
+  
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+      <%= link_to 'Preview', preview_product_path(@product), class: "btn btn-default" %>
+    </div>
+  </div>
+  
+  <div class="row">
+  </div>
 </div>
+

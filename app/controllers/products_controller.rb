@@ -11,9 +11,21 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+    @iframe = '<iframe src="http://hawkeye360.herokuapp.com/products/%s" width="%s" height="%s"></iframe>' % [@product.id, @product.display_width, @product.display_height]
     gon.image_path = "/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension
+    gon.display_width = @product.display_width
+    gon.display_height = @product.display_height
+  end
+
+  def preview
+    @product = Product.find(params[:id])
+    gon.image_path = "/uploads/product/images/#{@product.id}/"
+    gon.total_frames = @product.total_frames
+    gon.file_extension = @product.file_extension
+    gon.display_width = @product.display_width
+    gon.display_height = @product.display_height
   end
 
   # GET /products/new
@@ -72,6 +84,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :total_frames, :file_extension, {images: []})
+      params.require(:product).permit(:name, :description, :total_frames, :file_extension, 
+                                      :display_width, :display_height, {images: []})
     end
 end

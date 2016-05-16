@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509013453) do
+ActiveRecord::Schema.define(version: 20160516002843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20160509013453) do
     t.json     "images"
     t.integer  "total_frames"
     t.string   "file_extension"
+    t.integer  "display_height"
+    t.integer  "display_width"
   end
 
 end

@@ -11,8 +11,8 @@ function init(){
         imagePath: gon.image_path, // path of the image assets
         filePrefix: '', // file prefix if any
         ext: gon.file_extension, // extention for the assets
-        height: 375,
-        width: 500,
+        height: gon.display_height,
+        width: gon.display_width,
         navigation: true,
         //responsive: true
     });

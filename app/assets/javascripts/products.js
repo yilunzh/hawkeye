@@ -11,10 +11,10 @@ function init(){
         imagePath: gon.image_path, // path of the image assets
         filePrefix: '', // file prefix if any
         ext: gon.file_extension, // extention for the assets
-        height: 900,
-        width: 900,
+        height: 375,
+        width: 500,
         navigation: true,
-        responsive: true
+        //responsive: true
     });
 
 }

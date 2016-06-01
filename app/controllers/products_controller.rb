@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
-    @iframe = '<iframe src="http://hawkeye360.herokuapp.com/products/%s" width="%s" height="%s"></iframe>' % [@product.id, @product.display_width, @product.display_height]
+    @iframe = '<iframe src="https://hawkeye360.herokuapp.com/products/%s" width="%s" height="%s"></iframe>' % [@product.id, @product.display_width, @product.display_height]
     gon.image_path = "/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension

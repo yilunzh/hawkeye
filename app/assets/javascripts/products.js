@@ -14,7 +14,7 @@ function init(){
         height: gon.display_height,
         width: gon.display_width,
         navigation: true,
-        //responsive: true
+        responsive: true
     });
 
 }

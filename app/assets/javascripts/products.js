@@ -16,7 +16,6 @@ function init(){
         navigation: true,
         responsive: true
     });
-
 }
 
 window.onload = function() {

@@ -17,16 +17,17 @@ class ProductsController < ApplicationController
       @domain = "https://hawkeye360.herokuapp.com"
     end
     @iframe = '<iframe src="%s/products/%s/preview" width="%s" height="%s"></iframe>' % [@domain, @product.id, @product.display_width, @product.display_height]
-    gon.image_path = "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/#{@product.id}/"
+    gon.image_path = "https://s3-us-west-2.amazonaws.com/#{ENV['S3_BUCKET']}/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension
     gon.display_width = @product.display_width
     gon.display_height = @product.display_height
+    binding.pry
   end
 
   def preview
     @product = Product.find(params[:id])
-    gon.image_path = "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/#{@product.id}/"
+    gon.image_path = "https://s3-us-west-2.amazonaws.com/#{ENV['S3_BUCKET']}/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension
     gon.display_width = @product.display_width

@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @iframe = '<iframe src="https://hawkeye360.herokuapp.com/products/%s" width="%s" height="%s"></iframe>' % [@product.id, @product.display_width, @product.display_height]
-    gon.image_path = "/uploads/product/images/#{@product.id}/"
+    gon.image_path = "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension
     gon.display_width = @product.display_width
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
   def preview
     @product = Product.find(params[:id])
-    gon.image_path = "/uploads/product/images/#{@product.id}/"
+    gon.image_path = "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/#{@product.id}/"
     gon.total_frames = @product.total_frames
     gon.file_extension = @product.file_extension
     gon.display_width = @product.display_width

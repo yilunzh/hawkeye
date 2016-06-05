@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Hawkeye</title>
-  <%= include_gon %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Hawkeye</title>
+	  <%= include_gon %>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	
+	<body class="<%= @homepage ? 'homepage' : '' %>">
+		<% if not @preview  %>
+			<ul class="nav nav-pills">
+				<li role="presenation"><%= link_to 'Home', home_path %></li>
+				<li role="presenation"><%= link_to 'Gallery', products_path %></li>
+			</ul>
+		<% end %>
 
-<%= yield %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
-</body>
+		<%= yield %>
+		
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
+	</body>
 </html>

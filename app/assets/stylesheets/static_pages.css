@@ -1,0 +1,17 @@
+/*body.homepage {
+	background-image: url("/homepage_background.jpg");
+}*/
+
+video#homepage_video {
+	width: 100%;
+}
+
+/*.wrapper {
+	text-align: center;
+}*/
+
+#homepage_cta {
+	position: absolute;
+	top: 90%;
+	margin: 0 auto;
+}

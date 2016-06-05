@@ -22,7 +22,6 @@ class ProductsController < ApplicationController
     gon.file_extension = @product.file_extension
     gon.display_width = @product.display_width
     gon.display_height = @product.display_height
-    binding.pry
   end
 
   def preview

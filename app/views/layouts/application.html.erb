@@ -7,12 +7,21 @@
 	  <%= csrf_meta_tags %>
 	</head>
 	
-	<body class="<%= @homepage ? 'homepage' : '' %>">
+	<body class="<%= @index ? 'index_page' : '' %>">
 		<% if not @preview  %>
-			<ul class="nav nav-pills">
-				<li role="presenation"><%= link_to 'Home', home_path %></li>
-				<li role="presenation"><%= link_to 'Gallery', products_path %></li>
-			</ul>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<%= link_to 'Home', home_path, class: "nav navbar-brand" %>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><%= link_to 'Gallery', products_path %></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<%= link_to 'Create Spinner', new_product_path, class: "btn btn-default navbar-btn", id: "create_spinner" %>
+					</ul>
+				</div>
+			</nav>
 		<% end %>
 
 		<%= yield %>

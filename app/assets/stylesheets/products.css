@@ -1,3 +1,11 @@
+body.index_page {
+	background-color: #F8F8F8;
+}
+
+#create_spinner {
+	margin-right: 10px;
+}
+
 .attribute {
 	width: 320px;
 	word-wrap: break-word;
@@ -7,13 +15,21 @@
 	width: 100%;
 	display: inline-block;
 	box-sizing: border-box;
+	border-color: #dcdcdc;
 	border-style: solid;
-	padding: 20px;
+	border-width: thin;
+	border-radius: 5px;
+	padding: 5px;
 	margin-bottom: 30px;
 }
 
+/*.imag {
+	border-color: white;
+}*/
+
 .title {
-	margin-top: 0px;
+	margin-top: 10px;
+	text-align: center;
 }
 
 #display_box {

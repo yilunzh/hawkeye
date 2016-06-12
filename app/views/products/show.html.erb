@@ -55,7 +55,7 @@
 
   <div class="row">
     <div class="col-md-3 col-md-offset-1">
-      <%= image_tag "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/11/display_1.jpg", class: "edit_image", id: "canvas", crossorigin: "anonymous" %>
+      <%= image_tag "https://s3-us-west-2.amazonaws.com/#{ENV['S3_BUCKET']}/uploads/product/images/#{@product.id}/display_1#{@product.file_extension}", class: "edit_image", id: "canvas", crossorigin: "anonymous" %>
     </div>
   </div>
 

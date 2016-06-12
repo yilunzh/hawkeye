@@ -53,5 +53,33 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <%= image_tag "https://s3-us-west-2.amazonaws.com/hawkeye360-development/uploads/product/images/11/display_1.jpg", class: "edit_image", id: "canvas", crossorigin: "anonymous" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-md-offset-1">
+      <form id="silderInput">   
+        <output name="brightnessOutput" id="brightnessOutputId">Brightness: 0</output>
+        <input id="brightness" name="brightness" type="range" min="0" max="100" value="0">
+
+        <output name="contrastOutput" id="contrastOutputId">Contrast: 0</output>
+        <input id="contrast" name="contrast" type="range" min="-20" max="20" value="0">
+
+        <output name="saturationOutput" id="saturationOutputId">Saturation: 0</output>
+        <input id="saturation" name="saturation" type="range" min="-100" max="100" value="0">
+
+        <output name="vibranceOutput" id="vibranceOutputId">Vibrance: 0</output>
+        <input id="vibrance" name="vibrance" type="range" min="-20" max="20" value="0">
+
+        <output name="exposureOutput" id="exposureOutputId">Exposure: 0</output>
+        <input id="exposure" name="exposure" type="range" min="-20" max="20" value="0">
+      </form>
+
+    </div>
+  </div>
+
 </div>
 

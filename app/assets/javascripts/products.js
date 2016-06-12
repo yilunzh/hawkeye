@@ -21,3 +21,28 @@ function init(){
 window.onload = function() {
     init();
 };
+
+$('input[type=range]').change(applyFilters);
+
+function applyFilters() {
+  var brightness = parseInt($('#brightness').val());
+  var contrast = parseInt($('#contrast').val());
+  var saturation = parseInt($('#saturation').val());
+  var vibrance = parseInt($('#vibrance').val());
+  var exposure = parseInt($('#exposure').val());
+  console.log(contrast)
+    Caman('#canvas', 'display_1.jpg', function() {
+      this.revert(false);
+      this.brightness(brightness);
+      this.contrast(contrast);
+      this.saturation(saturation);
+      this.vibrance(vibrance);
+      this.exposure(exposure);
+      this.render();
+    });
+    $("#brightnessOutputId").val("Brightness: " + brightness.toString());
+    $("#contrastOutputId").val("Contrast: " + contrast.toString());
+    $("#saturationOutputId").val("Saturation: " + saturation.toString());
+        $("#vibranceOutputId").val("Vibrance: " + vibrance.toString());
+        $("#exposureOutputId").val("Exposure: " + exposure.toString());    
+}

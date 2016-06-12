@@ -14,4 +14,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require threesixty
+//= require caman.full
 //= require_tree .
